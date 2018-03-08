@@ -1,0 +1,3 @@
+rootProject.name = 'kit'
+
+include 'kit-jvm', 'kit-js'
