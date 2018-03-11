@@ -1,3 +1,8 @@
 rootProject.name = 'kit'
+include 'common'
+include 'common-jvm'
+include 'common-js'
 
-include 'kit-jvm', 'kit-js'
+include 'backend'
+include 'android', 'android:app'
+//include 'web'

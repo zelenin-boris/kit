@@ -1,23 +1,23 @@
-buildscript {
-    ext.kotlin_version = '1.2.10'
+allprojects {
+    buildscript {
+        ext.kotlin_version = '1.2.30'
+        ext.serialization_version = '0.4.2'
+        ext.anko_version = '0.10.4'
 
+        repositories {
+            maven { url "https://kotlin.bintray.com/kotlinx" }
+            maven { url 'https://maven.google.com' }
+            jcenter()
+        }
+        dependencies {
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+            classpath "org.jetbrains.kotlinx:kotlinx-gradle-serialization-plugin:$serialization_version"
+        }
+
+    }
     repositories {
-        mavenCentral()
+        maven { url "https://kotlin.bintray.com/kotlinx" }
+        maven { url 'https://maven.google.com' }
+        jcenter()
     }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-
-
-apply plugin: 'kotlin-platform-common'
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
-    testCompile "org.jetbrains.kotlin:kotlin-test-annotations-common:$kotlin_version"
-    testCompile "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
 }
